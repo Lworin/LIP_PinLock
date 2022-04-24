@@ -1,7 +1,7 @@
 /**
  * @file main.c
  * @author Luan Phelippe
- * @brief Realiza o acionamento e desacionamento de uma saída de acordo com o fornecimento correto de um PIN através das teclas do display LCD.
+ * @brief Realiza o acionamento e desacionamento de uma saÃ­da de acordo com o fornecimento correto de um PIN atravï¿½s das teclas do display LCD.
  * 
  */
 
@@ -17,15 +17,21 @@
 #include "adc.h"
 #include "lcd.h"
 
-#define	OFF 0 //1024
-#define RIG 1 //0
-#define UPP 2 //100
-#define DOW 3 //256
-#define LEF 4 //410
-#define SEL 5 //640
+#define	OFF 0
+#define RIG 1
+#define UPP 2
+#define DOW 3
+#define LEF 4
+#define SEL 5
 
-#define PASSWORD "1973"
+#define PASSWORD "1973" //PIN correto
 
+
+/**
+ * @brief Verifica qual botÃ£o foi pressionado
+ * 
+ * @return unsigned char 
+ */
 unsigned char botaoPressionado(void) {
 	
 	unsigned int result = 0;
@@ -66,7 +72,7 @@ int main(void)
 	DisplayLCD_Init();
 	DisplayLCD_Cmd(LCD_Clear);
 	
-	ddrd.bit0 = 1; //Define pino PB5 como saída
+	ddrd.bit0 = 1; //Define pino PB5 como saÃ­da
     
     for(;;)
     {		

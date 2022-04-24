@@ -17,6 +17,7 @@
 
 #User Specific Files
 *.atsln
+*.atsuo
 *.cproj
 *.xml
 *.mk
